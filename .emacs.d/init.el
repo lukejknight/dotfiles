@@ -77,6 +77,15 @@
 (ido-ubiquitous-mode 1)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-smart-open t)
+(setq backup-by-copying t)
+(setq backup-directory-alist
+      `((".*" . ,"~/.emacs-saves/")))
+(setq auto-save-file-name-transforms
+      `((".*" ,"~/.emacs-saves/" t)))
+
+;; TODO: automatic deletion of files in .emacs-saves/ after X time (needs testing)
+
+(global-visual-line-mode t)
 
 (set-frame-font "Droid Sans Mono-10")
 
