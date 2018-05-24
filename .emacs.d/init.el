@@ -85,9 +85,9 @@
 
 ;; TODO: automatic deletion of files in .emacs-saves/ after X time (needs testing)
 
-(global-visual-line-mode t)
-
-(set-frame-font "Droid Sans Mono-10")
+(global-visual-line-mode t) ;; line wrapping
+(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; start maximised
+(set-frame-font "Droid Sans Mono-14")
 
 ;; global keybindings
 (global-unset-key (kbd "C-z"))
