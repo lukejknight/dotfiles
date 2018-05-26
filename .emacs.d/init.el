@@ -77,6 +77,11 @@
 (ido-ubiquitous-mode 1)
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 (setq neo-smart-open t)
+(global-visual-line-mode t) ;; line wrapping
+(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; start maximised
+(set-frame-font "Droid Sans Mono-14")
+
+;; save back-ups and auto-saves in dedicated dir
 (setq backup-by-copying t)
 (setq backup-directory-alist
       `((".*" . ,"~/.emacs-saves/")))
@@ -84,10 +89,6 @@
       `((".*" ,"~/.emacs-saves/" t)))
 
 ;; TODO: automatic deletion of files in .emacs-saves/ after X time (needs testing)
-
-(global-visual-line-mode t) ;; line wrapping
-(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; start maximised
-(set-frame-font "Droid Sans Mono-14")
 
 ;; global keybindings
 (global-unset-key (kbd "C-z"))
@@ -99,3 +100,9 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; use command as meta on mac
+(setq mac-option-key-is-meta nil
+      mac-command-key-is-meta t
+      mac-command-modifier 'meta
+      mac-option-modifier 'none)
