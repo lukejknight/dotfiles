@@ -4,14 +4,17 @@ if [ ! -d ~/.emacs-saves ]; then
   mkdir -p ~/.emacs-saves;
 fi
 
+# zsh
+ln -sf ~/Projects/dotfiles/.zshrc ~/.zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# emacs
 ln -sfh ~/Projects/dotfiles/.emacs.d ~/.emacs.d
 
-ln -sf ~/Projects/dotfiles/.bash_profile ~/.bash_profile
-ln -sf ~/Projects/dotfiles/.bashrc ~/.bashrc
-ln -sf ~/Projects/dotfiles/.bash_prompt ~/.bash_prompt
-
+# lein
 ln -sfh ~/Projects/dotfiles/.lein ~/.lein
 
-curl -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > ~/.git-prompt.sh
-curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/.git-completion.bash
-
+# nvm
+mkdir ~/.nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash

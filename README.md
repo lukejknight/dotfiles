@@ -1,4 +1,46 @@
 # dotfiles
-Slowly adding my dotfiles to share across all the systems I work with. Feel free to use anything of interest.
 
-NOTE: May need to `brew uninstall bash-completion` if a bunch of errors are thrown on installation. Will fix eventually.
+Prerequisites:
+- fasd
+- Homebrew
+- tmux
+- tmuxinator
+- git
+- nvm
+- zsh
+
+Software Checklist:
+- 1password
+- alfred
+- amphetamine
+- ansible
+- aws
+- chrome
+- dash
+- discord
+- docker
+- dropbox
+- emacs
+- evernote
+- firefox
+- golang
+- intellij
+- iterm2
+- lein
+- music
+- rclone
+- pipenv
+- python
+- sbt
+- scroll reverser
+- slack
+- spectacle
+- spotify
+- stack
+- telegram
+- tex
+- todoist
+- tunnelblick
+- veracrypt
+- vscode
+- yarn
