@@ -7,7 +7,7 @@ Prerequisites:
 - tmuxinator
 - git
 - nvm
-- zsh
+- zsh (with prezto)
 
 Software Checklist:
 - 1password

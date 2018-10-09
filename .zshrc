@@ -1,28 +1,18 @@
-export ZSH="/Users/luke/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-ENABLE_CORRECTION="true"
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
-plugins=(
-  autojump
-  aws
-  colored-man-pages
-  fasd
-  git
-  git-auto-fetch
-  iterm2
-  nvm
-  postgres
-  pyenv
-  rand-quote
-  tmux
-  tmuxinator
-  zsh-syntax-highlighting
-)
+autoload -Uz promptinit
+promptinit
+prompt pure
 
-source $ZSH/oh-my-zsh.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 export LANG=en_US.UTF-8
 export GIT_AUTO_FETCH_INTERVAL=1200
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+source ~/.aliases
+source ~/.functions
