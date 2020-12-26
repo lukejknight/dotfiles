@@ -4,7 +4,7 @@ fi
 
 autoload -Uz promptinit
 promptinit
-prompt pure
+prompt pure 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
