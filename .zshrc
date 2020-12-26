@@ -12,7 +12,9 @@ export NVM_DIR="$HOME/.nvm"
 
 export LANG=en_US.UTF-8
 export GIT_AUTO_FETCH_INTERVAL=1200
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home -v 11`
 
 source ~/.aliases
 source ~/.functions
+
+PATH=$PATH:~/.local/bin
